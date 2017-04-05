@@ -5,11 +5,11 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCheck {
-    java -jar lod-converter.jar ../release-doc-in-process/all_vf.TTL TTL vf https://valueflows.github.io/valueflows/vf.ttl
+    java -jar .scripts/lod-converter.jar release-doc-in-process/all_vf.TTL TTL vf https://valueflows.github.io/valueflows/vf.ttl
 }
 
 function doGenerate {
-    java -jar lod-converter.jar ../release-doc-in-process/all_vf.TTL TTL vf https://valueflows.github.io/valueflows/vf.ttl
+    java -jar .scripts/lod-converter.jar release-doc-in-process/all_vf.TTL TTL vf https://valueflows.github.io/valueflows/vf.ttl
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
